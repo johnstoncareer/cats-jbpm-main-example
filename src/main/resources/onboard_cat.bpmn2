@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_A-We0YiqEeu99ccB29cCyQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:process id="onboard_cat" name="Default Process" isExecutable="false">
+    <bpmn2:startEvent id="StartEvent_1" name="Start">
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="EndEvent_1" name="End">
+      <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="Task_1" drools:selectable="true" drools:taskName="CatTask" name="Microchip Number Lookup">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Microchip Number Lookup]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script>System.out.println(&quot;Enter Microchip Number Lookup Task&quot;);</drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script>System.out.println(&quot;Exit Microchip Number Lookup Task&quot;);</drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_2" drools:selectable="true" drools:taskName="CatTask" name="Register New Cat">
+          <bpmn2:extensionElements>
+            <drools:metaData name="elementname">
+              <drools:metaValue><![CDATA[Register New Cat]]></drools:metaValue>
+            </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Enter Register New Cat Task&quot;);</drools:script>
+            </drools:onEntry-script>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Exit Register New Cat Task&quot;);</drools:script>
+            </drools:onExit-script>
+          </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_3" drools:selectable="true" drools:taskName="CatTask" name="Find Foster With Availability">
+          <bpmn2:extensionElements>
+            <drools:metaData name="elementname">
+              <drools:metaValue><![CDATA[Find Foster With Availability]]></drools:metaValue>
+            </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Enter Find Foster With Availability Task&quot;);</drools:script>
+            </drools:onEntry-script>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Exit Find Foster With Availability Task&quot;);</drools:script>
+            </drools:onExit-script>
+          </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_4" drools:selectable="true" drools:taskName="CatTask" name="List Cat on Petfinder">
+          <bpmn2:extensionElements>
+            <drools:metaData name="elementname">
+              <drools:metaValue><![CDATA[List Cat on Petfinder"]]></drools:metaValue>
+            </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Enter List Cat on Petfinder Task&quot;);</drools:script>
+            </drools:onEntry-script>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Exit List Cat on Petfinder Task&quot;);</drools:script>
+            </drools:onExit-script>
+          </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_5" drools:selectable="true" drools:taskName="CatTask" name="List Cat on Adopt-a-Pet">
+          <bpmn2:extensionElements>
+            <drools:metaData name="elementname">
+              <drools:metaValue><![CDATA[List Cat on Adopt-a-Pet]]></drools:metaValue>
+            </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Enter List Cat on Adopt-a-Pet Task&quot;);</drools:script>
+            </drools:onEntry-script>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+              <drools:script>System.out.println(&quot;Exit List Cat on Adopt-a-Pet Task&quot;);</drools:script>
+            </drools:onExit-script>
+          </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="Task_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="Task_1" targetRef="Task_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="Task_2" targetRef="Task_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="Task_3" targetRef="Task_4"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="Task_4" targetRef="Task_5"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_7" sourceRef="Task_5" targetRef="EndEvent_1"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="onboard_cat">
+      <bpmndi:BPMNShape id="BPMNShape_1" bpmnElement="StartEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="60.0" y="210.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="15.0" width="25.0" x="65.0" y="246.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_2" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="870.0" y="210.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="15.0" width="22.0" x="877.0" y="246.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="Task_1" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="130.0" y="203.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="30.0" width="109.0" x="130.0" y="213.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_2" bpmnElement="Task_2" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="280.0" y="203.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="15.0" width="97.0" x="286.0" y="220.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_3" bpmnElement="Task_3" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="424.0" y="203.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="30.0" width="101.0" x="428.0" y="213.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_4" bpmnElement="Task_4" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="570.0" y="203.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="30.0" width="70.0" x="590.0" y="213.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_5" bpmnElement="Task_5" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="720.0" y="203.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="30.0" width="104.0" x="723.0" y="213.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_1" targetElement="BPMNShape_Task_1">
+        <di:waypoint xsi:type="dc:Point" x="96.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="113.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="130.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_8"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_Task_1" targetElement="BPMNShape_Task_2">
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="280.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_Task_3">
+        <di:waypoint xsi:type="dc:Point" x="390.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="407.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="424.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_10"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="SequenceFlow_5" sourceElement="BPMNShape_Task_3" targetElement="BPMNShape_Task_4">
+        <di:waypoint xsi:type="dc:Point" x="534.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="552.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="570.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_11"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_6" bpmnElement="SequenceFlow_6" sourceElement="BPMNShape_Task_4" targetElement="BPMNShape_Task_5">
+        <di:waypoint xsi:type="dc:Point" x="680.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="700.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="720.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_12"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_7" bpmnElement="SequenceFlow_7" sourceElement="BPMNShape_Task_5" targetElement="BPMNShape_2">
+        <di:waypoint xsi:type="dc:Point" x="830.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="850.0" y="228.0"/>
+        <di:waypoint xsi:type="dc:Point" x="870.0" y="228.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_13"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="BPMNLabelStyle_1">
+      <dc:Font name="arial" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
